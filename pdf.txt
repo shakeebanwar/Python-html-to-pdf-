@@ -1,0 +1,21 @@
+convert html to pdf:
+
+step1:
+pip install pdfkit==1.0.0
+
+step2:
+* Debian/Ubuntu:
+    sudo apt-get install wkhtmltopdf
+
+*macOS:
+    brew install homebrew/cask/wkhtmltopdf
+
+
+
+Implementation:
+
+import pdfkit
+
+pdfkit.from_url('http://google.com', 'out.pdf')
+pdfkit.from_file('test.html', 'out.pdf')
+pdfkit.from_string('Hello!', 'out.pdf')
